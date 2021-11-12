@@ -3,23 +3,16 @@
 
 int main(void)
 {
-   int n = 0;
-   int max = 0;
-   while (n < 1)
+   int N = 0, max = 0, sum = 0, i = 1;
+   while (N < 1)
    {
     printf("Введіть число N: ");
-    scanf ("%i", &n);
+    scanf ("%i", &N);
    }
-
-
-   int k=0, temp=0,i = 1;
-   while (temp < n) {
-        max = temp;
-        temp +=i;
+   while (sum < N) {
+        sum += i;
         i++;
    }
 
-   printf("Число K: %i\n Сума:%i\n",max,temp);
-
-   return 0;
+   printf("Max K: %i, Сума чисел: %i\n", i - 1, sum);
 }
