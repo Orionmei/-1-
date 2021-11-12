@@ -1,22 +1,23 @@
 // задача 3 Гнатюк М.І
-#include <cs50.h>
 #include <stdio.h>
 
 int main(void)
 {
-    int n;
+    int month, day;
     printf("Введіть номер місяця: ");
-    scanf("%i", &n);
-    if (n==4 || n==6 || n==9 || n==11)
-    {
-        printf("30 днів\n");
+    scanf("%i", &month);
+    switch(month){
+        case 4: case 6: case 9: case 11: day = 30;
+        printf("Кількість днів у місяці %d", day);
+        break;
+        case 2: day = 28;
+        printf("Кількість днів у місяці %d", day);
+        break;
+        case 1: case 3: case 7: case 8 : case 10: case 12: day = 31;
+        printf("Кількість днів у місяці %d", day);
+        break;
+        default : printf("Такого місяця немає");
     }
-    else if ( n==2)
-    {
-        printf("28 днів\n");
+  
     }
-    else
-    {
-        printf("31 день\n");
-    }
-}
+  
