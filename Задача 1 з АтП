@@ -12,10 +12,11 @@ int main(void)
    }
 
 
-   int k=0, temp=0;
-   while (temp <= n) {
+   int k=0, temp=0,i = 1;
+   while (temp < n) {
         max = temp;
-        temp += 3;
+        temp +=i;
+        i++;
    }
 
    printf("Число K: %i\n Сума:%i\n",max,temp);
